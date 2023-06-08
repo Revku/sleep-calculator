@@ -1,5 +1,7 @@
+import MainTemplate from 'src/templates/MainTemplate';
+
 const Home = () => {
-  return <div>Home</div>;
+  return <MainTemplate>Home</MainTemplate>;
 };
 
 export default Home;
