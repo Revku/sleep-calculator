@@ -106,7 +106,7 @@ const Navigation = () => {
 
   return (
     <Wrapper>
-      <Logo to="./">
+      <Logo to="/">
         <LogoImage src={logo} alt="Logo" />
         <LogoText>KALKULATOR SNU</LogoText>
       </Logo>
@@ -118,13 +118,13 @@ const Navigation = () => {
           alt="Close menu"
           onClick={() => setOpen(!open)}
         />
-        <Link activeClassName="active" to="./">
+        <Link activeClassName="active" to="/">
           Strona Główna
         </Link>
-        <Link activeClassName="active" to="./cycles">
+        <Link activeClassName="active" to="/cycles">
           Cykle snu
         </Link>
-        <Link activeClassName="active" to="./about">
+        <Link activeClassName="active" to="/about">
           O aplikacji
         </Link>
       </Content>

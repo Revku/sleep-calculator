@@ -62,7 +62,7 @@ const Buttons = styled.div`
   max-width: 450px;
   border-radius: 5px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 500px) {
     flex-direction: row;
   }
 `;
@@ -116,12 +116,12 @@ const Time = styled.div`
 
 const Home = () => {
   const [mode, setMode] = useState('wake');
-  const [hours, setHours] = useState(7);
-  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState('07');
+  const [minutes, setMinutes] = useState('00');
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    const url = `/${mode}/${hours}/${minutes}`;
+    const url = `/result/${mode}/${hours}/${minutes}`;
     navigate(url);
   };
 
@@ -155,17 +155,17 @@ const Home = () => {
             id="hour"
             onChange={e => setHours(e.target.value)}
           >
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option selected value="7">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option selected value="07">
               07
             </option>
-            <option value="8">08</option>
-            <option value="9">09</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
             <option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
@@ -190,10 +190,10 @@ const Home = () => {
             id="minutes"
             onChange={e => setMinutes(e.target.value)}
           >
-            <option selected value="0">
+            <option selected value="00">
               00
             </option>
-            <option value="5">05</option>
+            <option value="05">05</option>
             <option value="10">10</option>
             <option value="15">15</option>
             <option value="20">20</option>
