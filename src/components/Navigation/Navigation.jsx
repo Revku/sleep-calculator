@@ -121,10 +121,10 @@ const Navigation = () => {
         <Link activeClassName="active" to="/">
           Strona Główna
         </Link>
-        <Link activeClassName="active" to="/cycles">
+        <Link activeClassName="active" to="/cykle-snu">
           Cykle snu
         </Link>
-        <Link activeClassName="active" to="/about">
+        <Link activeClassName="active" to="/o-aplikacji">
           O aplikacji
         </Link>
       </Content>

@@ -78,7 +78,7 @@ const Result = () => {
       hours > 24 ||
       minutes < 0 ||
       minutes > 60 ||
-      (params.mode != 'sleep' && params.mode != 'wake')
+      (params.mode != 'porasnu' && params.mode != 'pobudka')
     ) {
       navigate('/');
     }
@@ -90,7 +90,7 @@ const Result = () => {
         <Heading>Twoje wyniki</Heading>
 
         <Description>
-          {params.mode == 'wake'
+          {params.mode == 'pobudka'
             ? `Człowiek potrzebuje około 15 minut aby zasnąć. Żeby obudzić się o
             ${timeString}, musisz położyć się spać o wybranych godzinach`
             : `Człowiek potrzebuje około 15 minut aby zasnąć. Jeżeli pójdziesz spać o ${timeString}, musisz obudzić się w jednym z wybranych momentów:`}
@@ -103,7 +103,7 @@ const Result = () => {
         </Times>
 
         <Description>
-          {params.mode == 'wake'
+          {params.mode == 'pobudka'
             ? `Jeśli pójdziesz spać w jednym z tych momentów, wstaniesz między 90-minutowymi cyklami snu. Dobry sen składa się z 5-6 pełnych cykli snu.`
             : `Jeśli obudzisz się w jednym z tych momentów, wstaniesz między 90-minutowymi cyklami snu. Dobry sen składa się z 5-6 pełnych cykli snu.`}
         </Description>

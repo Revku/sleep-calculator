@@ -115,13 +115,13 @@ const Time = styled.div`
 `;
 
 const Home = () => {
-  const [mode, setMode] = useState('wake');
+  const [mode, setMode] = useState('pobudka');
   const [hours, setHours] = useState('07');
   const [minutes, setMinutes] = useState('00');
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    const url = `/result/${mode}/${hours}/${minutes}`;
+    const url = `/wyniki/${mode}/${hours}/${minutes}`;
     navigate(url);
   };
 
@@ -136,14 +136,14 @@ const Home = () => {
 
         <Buttons>
           <Option
-            isActive={mode === 'wake' ? true : false}
-            onClick={() => setMode('wake')}
+            isActive={mode === 'pobudka' ? true : false}
+            onClick={() => setMode('pobudka')}
           >
             Chcę wstać o...
           </Option>
           <Option
-            isActive={mode === 'sleep' ? true : false}
-            onClick={() => setMode('sleep')}
+            isActive={mode === 'porasnu' ? true : false}
+            onClick={() => setMode('porasnu')}
           >
             Chcę się położyć o...
           </Option>

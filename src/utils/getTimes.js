@@ -7,7 +7,7 @@ export const getTimes = (time, mode) => {
   let cycles = 0;
   let sleepTime = 0;
 
-  if (mode == 'sleep') {
+  if (mode == 'porasnu') {
     bedTime = bedTime.plus({ minutes: 15 });
     for (let i = 0; i < 6; i++) {
       bedTime = bedTime.plus({ minutes: 90 });
