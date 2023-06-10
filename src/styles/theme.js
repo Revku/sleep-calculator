@@ -5,7 +5,7 @@ export const theme = {
     secondary: '#162530',
   },
   fonts: {
-    primary: 'Varela Round',
+    primary: 'Poppins',
     secondary: 'sans-serif',
   },
 };
