@@ -12,6 +12,7 @@ const Wrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0px 30px;
+  z-index: 100;
 
   @media (min-width: 700px) {
     justify-content: space-around;

@@ -5,7 +5,7 @@ import { GlobalStyle } from 'src/styles/GlobalStyle';
 import Navigation from 'src/components/Navigation/Navigation';
 
 const Wrapper = styled.div`
-  height: 100%;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: 100px 1fr 100px;
 `;
