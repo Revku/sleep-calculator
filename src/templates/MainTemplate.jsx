@@ -3,11 +3,12 @@ import { theme } from 'src/styles/theme';
 import PropTypes from 'prop-types';
 import { GlobalStyle } from 'src/styles/GlobalStyle';
 import Navigation from 'src/components/Navigation/Navigation';
+import Footer from 'src/components/Footer/Footer';
 
 const Wrapper = styled.div`
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 100px 1fr 140px;
 `;
 
 const MainTemplate = ({ children }) => {
@@ -17,7 +18,7 @@ const MainTemplate = ({ children }) => {
       <Wrapper>
         <Navigation />
         <div>{children}</div>
-        <div></div>
+        <Footer />
       </Wrapper>
     </ThemeProvider>
   );

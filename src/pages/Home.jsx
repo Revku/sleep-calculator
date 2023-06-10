@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 30px;
+  padding: 50px 30px;
 `;
 
 const Heading = styled.h1`
