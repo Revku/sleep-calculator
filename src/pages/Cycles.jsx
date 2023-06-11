@@ -1,6 +1,7 @@
 import MainTemplate from 'src/templates/MainTemplate';
 import { styled } from 'styled-components';
 import ReactGA from 'react-ga4';
+import { Helmet } from 'react-helmet';
 
 const Wrapper = styled.div`
   max-width: 1000px;
@@ -46,6 +47,9 @@ const Cycles = () => {
   return (
     <MainTemplate>
       <Wrapper>
+        <Helmet>
+          <title>Cykle Snu - Kalkulator Snu</title>
+        </Helmet>
         <Heading>
           <h1>Cykle snu i zdrowy sen</h1>
           <p>

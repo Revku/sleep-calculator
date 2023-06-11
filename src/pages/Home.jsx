@@ -4,6 +4,7 @@ import Button from 'src/components/Button/Button';
 import MainTemplate from 'src/templates/MainTemplate';
 import { styled } from 'styled-components';
 import ReactGA from 'react-ga4';
+import { Helmet } from 'react-helmet';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -135,6 +136,9 @@ const Home = () => {
   return (
     <MainTemplate>
       <Wrapper>
+        <Helmet>
+          <title>Kalkulator snu - oblicz idealną porę snu</title>
+        </Helmet>
         <Heading>Kalkulator Snu</Heading>
         <Description>
           Aplikacja obliczy, o której godzinie musisz położyć się spać, aby

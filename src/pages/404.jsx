@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import Button from 'src/components/Button/Button';
 import MainTemplate from 'src/templates/MainTemplate';
@@ -25,6 +26,9 @@ const NotFound = () => {
 
   return (
     <MainTemplate>
+      <Helmet>
+        <title>Nie znaleziono strony - Kalkulator Snu</title>
+      </Helmet>
       <Wrapper>
         <h1>Nie znaleziono strony</h1>
         <p>

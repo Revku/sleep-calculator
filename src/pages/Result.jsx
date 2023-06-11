@@ -6,6 +6,7 @@ import MainTemplate from 'src/templates/MainTemplate';
 import { getTimes } from 'src/utils/getTimes';
 import { styled } from 'styled-components';
 import ReactGA from 'react-ga4';
+import { Helmet } from 'react-helmet';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -94,6 +95,12 @@ const Result = () => {
   return (
     <MainTemplate>
       <Wrapper>
+        <Helmet>
+          <title>
+            Wyniki - {params.mode == 'porasnu' ? 'chcę zasnąć' : 'chcę wstać'} o{' '}
+            {timeString}
+          </title>
+        </Helmet>
         <Heading>Twoje wyniki</Heading>
 
         <Description>
