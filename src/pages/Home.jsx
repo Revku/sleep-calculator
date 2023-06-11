@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from 'src/components/Button/Button';
 import MainTemplate from 'src/templates/MainTemplate';
 import { styled } from 'styled-components';
+import ReactGA from 'react-ga4';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -124,6 +125,12 @@ const Home = () => {
     const url = `/wyniki/${mode}/${hours}/${minutes}`;
     navigate(url);
   };
+
+  ReactGA.send({
+    hitType: 'pageview',
+    page: '/',
+    title: 'Strona Główna',
+  });
 
   return (
     <MainTemplate>

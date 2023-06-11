@@ -5,6 +5,7 @@ import Time from 'src/components/Time/Time';
 import MainTemplate from 'src/templates/MainTemplate';
 import { getTimes } from 'src/utils/getTimes';
 import { styled } from 'styled-components';
+import ReactGA from 'react-ga4';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -69,6 +70,12 @@ const Result = () => {
   const minutes = parseInt(params.minutes);
   const timeString = `${params.hours}:${params.minutes}`;
   const [times] = useState(getTimes(timeString, params.mode));
+
+  ReactGA.send({
+    hitType: 'pageview',
+    page: '/wyniki',
+    title: 'Wyniki',
+  });
 
   useEffect(() => {
     if (

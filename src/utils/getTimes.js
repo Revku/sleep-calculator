@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 export const getTimes = (time, mode) => {
-  let bedTime = DateTime.fromISO(time)
+  let result = DateTime.fromISO(time)
     .setLocale('pl-PL')
     .setZone('Europe/Warsaw');
   let tempTimes = [];
@@ -8,25 +8,25 @@ export const getTimes = (time, mode) => {
   let sleepTime = 0;
 
   if (mode == 'porasnu') {
-    bedTime = bedTime.plus({ minutes: 15 });
+    result = result.plus({ minutes: 15 });
     for (let i = 0; i < 6; i++) {
-      bedTime = bedTime.plus({ minutes: 90 });
+      result = result.plus({ minutes: 90 });
       sleepTime += 90;
       cycles++;
       tempTimes.push({
-        time: bedTime.toFormat('HH:mm'),
+        time: result.toFormat('HH:mm'),
         cycles: cycles,
         sleepTime: sleepTime / 60,
       });
     }
   } else {
-    bedTime = bedTime.minus({ minutes: 15 });
+    result = result.minus({ minutes: 15 });
     for (let i = 0; i < 6; i++) {
-      bedTime = bedTime.minus({ minutes: 90 });
+      result = result.minus({ minutes: 90 });
       sleepTime += 90;
       cycles++;
       tempTimes.push({
-        time: bedTime.toFormat('HH:mm'),
+        time: result.toFormat('HH:mm'),
         cycles: cycles,
         sleepTime: sleepTime / 60,
       });
