@@ -6,13 +6,8 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 5px;
   width: 100%;
-  transition: transform 0.3s;
   cursor: default;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  &:hover {
-    transform: scale(1.1);
-  }
 
   @media (min-width: 400px) {
     width: 45%;
