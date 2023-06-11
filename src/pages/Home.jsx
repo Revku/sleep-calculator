@@ -69,8 +69,8 @@ const Buttons = styled.div`
 
 const Separator = styled.div`
   height: 90%;
-  width: 1px;
-  background-color: white;
+  width: 2px;
+  background-color: #8b8b8b;
   border-radius: 50px;
   margin: 0px 15px;
 `;

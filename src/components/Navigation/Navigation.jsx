@@ -13,10 +13,6 @@ const Wrapper = styled.nav`
   align-items: center;
   padding: 0px 30px;
   z-index: 100;
-
-  @media (min-width: 700px) {
-    justify-content: space-around;
-  }
 `;
 
 const LogoImage = styled.img`
@@ -29,10 +25,11 @@ const Link = styled(NavLink)`
   font-weight: 500;
   font-size: 17px;
   margin: 10px 0;
+  padding: 10px 15px;
 
   @media (min-width: 700px) {
     margin: 0;
-    margin-left: 15px;
+    margin-left: 5px;
     font-size: 16px;
     font-weight: 500;
   }

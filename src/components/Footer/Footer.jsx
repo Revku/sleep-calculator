@@ -14,15 +14,16 @@ const Wrapper = styled.div`
   @media (min-width: 700px) {
     font-size: 15px;
     flex-direction: row;
+    justify-content: space-between;
   }
   span {
     margin: 0 10px;
   }
 
-  @media (max-width: 700px) {
-    span {
-      display: none;
-    }
+  a {
+    color: #2e5dd4;
+    font-weight: 500;
+    text-decoration: none;
   }
 `;
 
@@ -46,8 +47,12 @@ const Logo = styled.img`
 const Footer = () => {
   return (
     <Wrapper>
-      <p>Sleep Lab &copy; 2023 </p>
-      <span>&bull;</span>{' '}
+      <p>
+        Oparte na licencji MIT<span>&bull;</span>
+        <a href="/github" target="_blank">
+          Repozytorium GitHub
+        </a>
+      </p>
       <Author>
         Stworzone przez
         <a href="https://revku.dev/" target="_blank" rel="noreferrer">

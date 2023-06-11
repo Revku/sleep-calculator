@@ -7,19 +7,28 @@ import Footer from 'src/components/Footer/Footer';
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-rows: 100px 1fr 140px;
+  max-width: 1200px;
+`;
+
+const FlexWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const MainTemplate = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Wrapper>
-        <Navigation />
-        <div>{children}</div>
-        <Footer />
-      </Wrapper>
+      <FlexWrapper>
+        <Wrapper>
+          <Navigation />
+          <div>{children}</div>
+          <Footer />
+        </Wrapper>
+      </FlexWrapper>
     </ThemeProvider>
   );
 };
