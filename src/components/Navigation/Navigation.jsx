@@ -118,6 +118,9 @@ const Navigation = () => {
         <Link activeClassName="active" to="/">
           Strona Główna
         </Link>
+        <Link activeClassName="active" to="/cykle-snu">
+          Cykle snu
+        </Link>
       </Content>
     </Wrapper>
   );
