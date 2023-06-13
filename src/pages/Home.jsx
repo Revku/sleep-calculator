@@ -141,8 +141,11 @@ const Home = () => {
   const handleNowButtonClick = () => {
     const time = new Date();
 
-    const hours = time.getHours();
-    const minutes = time.getMinutes();
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
+
+    if (hours < 10) hours = `0${hours}`;
+    if (minutes < 10) minutes = `0${minutes}`;
 
     const url = `/wyniki/${mode}/${hours}/${minutes}`;
     navigate(url);
