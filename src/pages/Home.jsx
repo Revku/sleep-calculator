@@ -90,7 +90,7 @@ const Option = styled.button`
 `;
 
 const Time = styled.div`
-  margin: 50px 0;
+  margin-top: 50px;
   padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 5px;
@@ -116,6 +116,17 @@ const Time = styled.div`
   }
 `;
 
+const NowButton = styled.button`
+  margin-top: 10px;
+  color: #2e5dd4;
+  margin-bottom: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+`;
+
 const Home = () => {
   const [mode, setMode] = useState('pobudka');
   const [hours, setHours] = useState('07');
@@ -123,6 +134,16 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
+    const url = `/wyniki/${mode}/${hours}/${minutes}`;
+    navigate(url);
+  };
+
+  const handleNowButtonClick = () => {
+    const time = new Date();
+
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+
     const url = `/wyniki/${mode}/${hours}/${minutes}`;
     navigate(url);
   };
@@ -139,6 +160,7 @@ const Home = () => {
         <Helmet>
           <title>Kalkulator snu - oblicz idealną porę snu</title>
         </Helmet>
+
         <Heading>Kalkulator Snu</Heading>
         <Description>
           Aplikacja obliczy, o której godzinie musisz położyć się spać, aby
@@ -217,6 +239,9 @@ const Home = () => {
             <option value="55">55</option>
           </select>
         </Time>
+        <NowButton onClick={handleNowButtonClick}>
+          użyj aktualnej godziny
+        </NowButton>
 
         <Button onClick={handleSubmit}>Oblicz cykle snu</Button>
       </Wrapper>
